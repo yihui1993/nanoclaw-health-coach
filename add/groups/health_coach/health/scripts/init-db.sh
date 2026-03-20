@@ -1,6 +1,6 @@
 #!/bin/bash
 # Initialize the health database
-DB=/workspace/group/health/health.db
+DB=${DB:-/workspace/group/health/health.db}
 
 sqlite3 "$DB" <<'SQL'
 CREATE TABLE IF NOT EXISTS body_metrics (
