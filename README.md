@@ -161,6 +161,35 @@ The skills engine will apply any new template files from `add/` without touching
 
 ---
 
+## Web Dashboard
+
+This skill includes a local web dashboard for visualizing your health data. Run it with `/start-health-web` in Claude Code, or:
+
+```bash
+npm run dashboard
+# then open http://localhost:3001
+```
+
+**Dashboard tabs:**
+| Tab | What you see |
+|-----|-------------|
+| Overview | Key stats (weight, BF%, muscle mass, avg sleep) + 4 trend charts |
+| Body | Weight, body fat %, lean mass, visceral fat, bone density trends + BodySpec scan history table |
+| Sleep | Duration & heart rate chart, bedtime/wake chart, full sleep log |
+| Workouts | Weekly frequency chart + monthly calendar with muscle group tags |
+| Nutrition | 30-day calorie & protein trends + recent meal list |
+
+The dashboard server reads directly from `groups/health_coach/health/health.db`. No data leaves your machine.
+
+**Configuration via `.env`:**
+```
+HEALTH_GROUP=health_coach        # group folder name (default: health_coach)
+HEALTH_TZ=America/Los_Angeles    # timezone for meal timestamps (default: America/Los_Angeles)
+HEALTH_DASHBOARD_PORT=3001       # port (default: 3001)
+```
+
+---
+
 ## Companion Claude Code Skills
 
 This repo also includes Claude Code skills for logging health data directly from Claude Code — useful when you're at your computer and don't want to go through your messaging app. They read and write the same `health.db` as the chat agent.
@@ -170,6 +199,7 @@ This repo also includes Claude Code skills for logging health data directly from
 | `/log-meal` | Log a meal with nutrition estimation and running daily totals |
 | `/log-sleep` | Log bedtime/wake time with duration and heart rate |
 | `/sync-bodyspec` | Sync BodySpec DEXA scan results into the database (requires BodySpec MCP) |
+| `/start-health-web` | Start the local web dashboard and open it in the browser |
 
 ### Install companion skills
 
@@ -178,6 +208,7 @@ This repo also includes Claude Code skills for logging health data directly from
 cp -r .claude/skills/health-coach/skills/log-meal .claude/skills/
 cp -r .claude/skills/health-coach/skills/log-sleep .claude/skills/
 cp -r .claude/skills/health-coach/skills/sync-bodyspec .claude/skills/
+cp -r .claude/skills/health-coach/skills/start-health-web .claude/skills/
 ```
 
 Then use them in Claude Code:

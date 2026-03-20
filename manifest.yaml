@@ -1,12 +1,23 @@
 skill: health-coach
-version: 1.0.0
-description: "Personal health coach — tracks meals, sleep, workouts, and body composition. Works with any NanoClaw channel."
+version: 1.1.0
+description: "Personal health coach — tracks meals, sleep, workouts, and body composition. Works with any NanoClaw channel. Includes web dashboard."
 core_version: 1.2.0
 adds:
   - groups/health_coach/health/scripts/init-db.sh
   - groups/health_coach/meal-shortcuts.json
+  - dashboard/server.ts
+  - dashboard/public/index.html
+  - dashboard/public/style.css
+  - dashboard/public/app.js
 modifies: []
-structured: {}
+structured:
+  npm_dependencies:
+    express: "^5.2.1"
+    multer: "^2.1.1"
+    better-sqlite3: "^11.8.1"
+    "@types/express": "^5.0.6"
+    "@types/multer": "^2.1.0"
+    "@types/better-sqlite3": "^7.6.12"
 depends: []
 conflicts: []
 test: ""
