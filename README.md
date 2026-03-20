@@ -163,8 +163,26 @@ The skills engine will apply any new template files from `add/` without touching
 
 ## Companion Claude Code Skills
 
-If you also want to log health data directly from Claude Code (not just through your messaging app), see these companion skills in NanoClaw:
+This repo also includes Claude Code skills for logging health data directly from Claude Code — useful when you're at your computer and don't want to go through your messaging app. They read and write the same `health.db` as the chat agent.
 
-- `/log-meal` — log a meal directly from Claude Code
-- `/log-sleep` — log sleep directly from Claude Code
-- `/sync-bodyspec` — sync BodySpec DEXA scan results into the database
+| Skill | Description |
+|-------|-------------|
+| `/log-meal` | Log a meal with nutrition estimation and running daily totals |
+| `/log-sleep` | Log bedtime/wake time with duration and heart rate |
+| `/sync-bodyspec` | Sync BodySpec DEXA scan results into the database (requires BodySpec MCP) |
+
+### Install companion skills
+
+```bash
+# From inside your NanoClaw directory
+cp -r .claude/skills/health-coach/skills/log-meal .claude/skills/
+cp -r .claude/skills/health-coach/skills/log-sleep .claude/skills/
+cp -r .claude/skills/health-coach/skills/sync-bodyspec .claude/skills/
+```
+
+Then use them in Claude Code:
+```
+/log-meal I had oatmeal with protein powder for breakfast
+/log-sleep went to bed at 11pm, woke up at 7am
+/sync-bodyspec
+```
