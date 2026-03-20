@@ -18,6 +18,8 @@ structured:
     "@types/express": "^5.0.6"
     "@types/multer": "^2.1.0"
     "@types/better-sqlite3": "^7.6.12"
+post_apply:
+  - npm pkg set scripts.dashboard="tsx dashboard/server.ts"
 depends: []
 conflicts: []
 test: ""
