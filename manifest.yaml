@@ -1,0 +1,12 @@
+skill: health-coach
+version: 1.0.0
+description: "Personal health coach — tracks meals, sleep, workouts, and body composition. Works with any NanoClaw channel."
+core_version: 1.2.0
+adds:
+  - groups/health_coach/health/scripts/init-db.sh
+  - groups/health_coach/meal-shortcuts.json
+modifies: []
+structured: {}
+depends: []
+conflicts: []
+test: ""

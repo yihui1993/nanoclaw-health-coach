@@ -1,0 +1,58 @@
+{
+  "protein powder": {
+    "description": "1 scoop whey/plant protein powder",
+    "calories": 120,
+    "protein_g": 24,
+    "carbs_g": 3,
+    "fat_g": 1.5
+  },
+  "greek yogurt": {
+    "description": "170g plain non-fat Greek yogurt",
+    "calories": 100,
+    "protein_g": 17,
+    "carbs_g": 6,
+    "fat_g": 0
+  },
+  "cottage cheese": {
+    "description": "1/2 cup low-fat cottage cheese",
+    "calories": 90,
+    "protein_g": 13,
+    "carbs_g": 5,
+    "fat_g": 1.5
+  },
+  "egg": {
+    "description": "1 large egg",
+    "calories": 72,
+    "protein_g": 6,
+    "carbs_g": 0,
+    "fat_g": 5
+  },
+  "white rice": {
+    "description": "1 cup cooked white rice",
+    "calories": 200,
+    "protein_g": 4,
+    "carbs_g": 45,
+    "fat_g": 0
+  },
+  "sweet potato": {
+    "description": "1 medium sweet potato (130g)",
+    "calories": 112,
+    "protein_g": 2,
+    "carbs_g": 26,
+    "fat_g": 0
+  },
+  "chicken breast": {
+    "description": "100g cooked chicken breast",
+    "calories": 165,
+    "protein_g": 31,
+    "carbs_g": 0,
+    "fat_g": 3.6
+  },
+  "soymilk": {
+    "description": "240ml unsweetened soymilk",
+    "calories": 80,
+    "protein_g": 7,
+    "carbs_g": 4,
+    "fat_g": 4
+  }
+}
